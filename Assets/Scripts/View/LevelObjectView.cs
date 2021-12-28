@@ -4,13 +4,13 @@ using UnityEngine;
 
 
 
-namespace PlatformerMVC
+namespace PlatformerMVC.View
 {
     public class LevelObjectView : MonoBehaviour
     {
 
-       public Transform _transform;
-       public SpriteRenderer _spriteRenderer;
+       public Transform PlayerTransform;
+       public SpriteRenderer SpriteRenderer;
        public Rigidbody2D _rigidbody2D;
        public Collider2D _collider2D;
     }

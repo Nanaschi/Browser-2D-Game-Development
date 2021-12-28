@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PlatformerMVC.Configs;
 using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace PlatformerMVC
+namespace PlatformerMVC.Controllers
 {
     public class SpriteAnimatorController : IDisposable
     {
@@ -57,7 +58,7 @@ namespace PlatformerMVC
 
                 if (animation.Value.Counter < animation.Value.Sprites.Count)
                 {
-                    animation.Key.sprite = animation.Value.Sprites[(int)animation.Value.Counter];
+                     animation.Key.sprite = animation.Value.Sprites[(int)animation.Value.Counter];
                 }
             }
         }

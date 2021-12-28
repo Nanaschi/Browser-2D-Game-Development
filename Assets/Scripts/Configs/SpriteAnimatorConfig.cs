@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PlatformerMVC
+namespace PlatformerMVC.Configs
 {
 
     public enum AnimStatePlayer 

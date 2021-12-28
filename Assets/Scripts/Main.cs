@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PlatformerMVC.Configs;
+using PlatformerMVC.Controllers;
+using PlatformerMVC.View;
 using UnityEngine;
 
 
@@ -13,6 +16,8 @@ namespace PlatformerMVC
         [SerializeField] private LevelObjectView _playerView;
 
         private SpriteAnimatorController _playerAnimator;
+        private CameraController _cameraController;
+        private PlayerController _playerController;
 
         private void Start()
         {
@@ -20,14 +25,17 @@ namespace PlatformerMVC
             if (_playerAnimatorConfig)
             {
                 _playerAnimator = new SpriteAnimatorController(_playerAnimatorConfig);
-                _playerAnimator.StartAnimation(_playerView._spriteRenderer, AnimStatePlayer.Run, true, _animationSpeed);
             }
-            
+
+            _cameraController = new CameraController(_playerView.PlayerTransform, Camera.main.transform);
+            _playerController = new PlayerController(_playerView, _playerAnimator);
+
         }
 
         private void Update()
         {
-            _playerAnimator.Update();
+            _playerController.Update();
+            _cameraController.Update();
         }
     }
 }
