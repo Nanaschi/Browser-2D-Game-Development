@@ -1665,7 +1665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629468e10f88c6e43be931cd04d95e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Transform: {fileID: 0}
+  _Transform: {fileID: 1937485583}
   SpriteRenderer: {fileID: 1937485582}
   _rigidbody2D: {fileID: 1937485584}
   _collider2D: {fileID: 1937485585}
