@@ -15,6 +15,8 @@ namespace  PlatformerMVC.Controllers
         private float offSetY = 1.5f;
 
         private int _camSpeed = 150;
+        
+        
         private Transform _playerTransform;
         private Transform _cameraTransform;
         

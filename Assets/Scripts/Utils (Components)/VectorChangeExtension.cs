@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public static class VectorChange 
+public static class VectorChangeExtension 
 {
     public static Vector3 Change(this Vector3 obj, object x = null, object y= null, object z= null)
     {

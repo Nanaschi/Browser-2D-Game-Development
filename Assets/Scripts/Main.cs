@@ -14,10 +14,14 @@ namespace PlatformerMVC
         [SerializeField] private SpriteAnimatorConfig _playerAnimatorConfig;
         [SerializeField] private int _animationSpeed;
         [SerializeField] private LevelObjectView _playerView;
+        [SerializeField] private CanonView _canonView;
 
         private SpriteAnimatorController _playerAnimator;
         private CameraController _cameraController;
         private PlayerController _playerController;
+        private CanonAimController _canonAimController;
+        private BulletEmitterController _bulletEmitterController; //The intialization of BulletController we make here
+        
 
         private void Start()
         {
@@ -27,15 +31,19 @@ namespace PlatformerMVC
                 _playerAnimator = new SpriteAnimatorController(_playerAnimatorConfig);
             }
 
-            _cameraController = new CameraController(_playerView.PlayerTransform, Camera.main.transform);
+            _cameraController = new CameraController(_playerView._Transform, Camera.main.transform);
             _playerController = new PlayerController(_playerView, _playerAnimator);
 
+            _canonAimController = new CanonAimController(_canonView._muzzleTransform, _playerView._Transform);
+            _bulletEmitterController = new BulletEmitterController(_canonView._bullets, _canonView._emitterTransform);
         }
 
-        private void Update()
+        private void LateUpdate()
         {
             _playerController.Update();
             _cameraController.Update();
+            _canonAimController.Update();
+            _bulletEmitterController.Update();
         }
     }
 }
