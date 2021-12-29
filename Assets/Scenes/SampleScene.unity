@@ -1168,7 +1168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1008150611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8998c5460773eaa4e91e2bd7fbfb7796, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cef172e232f29f43af1de1b79730882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _muzzleTransform: {fileID: 1433402494}
@@ -1665,7 +1665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629468e10f88c6e43be931cd04d95e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Transform: {fileID: 1937485583}
+  _Transform: {fileID: 0}
   SpriteRenderer: {fileID: 1937485582}
   _rigidbody2D: {fileID: 1937485584}
   _collider2D: {fileID: 1937485585}
