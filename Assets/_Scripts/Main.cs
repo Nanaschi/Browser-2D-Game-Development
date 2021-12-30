@@ -12,17 +12,23 @@ namespace PlatformerMVC
     public class Main : MonoBehaviour
     {
         [SerializeField] private SpriteAnimatorConfig _playerAnimatorConfig;
-        [SerializeField] private int _animationSpeed;
+
+        #region Views
         [SerializeField] private LevelObjectView _playerView;
         [SerializeField] private CanonView _canonView;
+        #endregion
 
+
+
+        #region Controllers
         private SpriteAnimatorController _playerAnimator;
         private CameraController _cameraController;
         private PlayerController _playerController;
         private CanonAimController _canonAimController;
         private BulletEmitterController _bulletEmitterController; //The intialization of BulletController we make here
-        
+        #endregion
 
+        
         private void Start()
         {
             _playerAnimatorConfig = Resources.Load<SpriteAnimatorConfig>("PlayerAnimatorConfig");

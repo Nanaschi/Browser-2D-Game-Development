@@ -65,7 +65,7 @@ namespace  PlatformerMVC.Configs
                     (_playerView.SpriteRenderer, _isMoving? AnimStatePlayer.Run: AnimStatePlayer.Idle, true, _animationSpeed);
                 if (_isJump && Mathf.Abs(_playerView._rigidbody2D.velocity.y) <= _jumpThreshHold)
                 {
-                    _playerView._rigidbody2D.AddForce(Vector2.up * _jumpSpeed, ForceMode2D.Impulse);
+                    Physics2DJump();
                 } 
             } else
             {
@@ -76,6 +76,11 @@ namespace  PlatformerMVC.Configs
                 }
             }
 
+        }
+
+        private void Physics2DJump()
+        {
+            _playerView._rigidbody2D.AddForce(Vector2.up * _jumpSpeed, ForceMode2D.Impulse);
         }
     }
     
