@@ -14,7 +14,7 @@ namespace  PlatformerMVC.Configs
         private bool _isJump;
         private bool _isMoving;
 
-        private float _speed = 30f;
+        private float _speed = 90f;
         private float _animationSpeed = 10f;
         private float _jumpSpeed = 9;
         private float _movingThreshHold = .1f;
