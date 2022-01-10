@@ -25,6 +25,7 @@ namespace PlatformerMVC
         [SerializeField] private LevelObjectView _playerView;
         [SerializeField] private CanonView _canonView;
         [SerializeField] private LevelGeneratorView _levelGeneratorView;
+        [SerializeField] private QuestView _questView;//NEW LESSON 7
         #endregion
 
 
@@ -35,9 +36,10 @@ namespace PlatformerMVC
         private CameraController _cameraController;
         private PlayerController _playerController;
         private CanonAimController _canonAimController;
-        private BulletEmitterController _bulletEmitterController; //The intialization of BulletController we make here
+        private BulletEmitterController _bulletEmitterController; 
         private CoinsController _coinsController;
         private GeneratorController _levelGeneratorController;
+        private QuestConfiguratorController _questConfiguratorController;//NEW LESSON 7
         #endregion
 
         
@@ -63,6 +65,9 @@ namespace PlatformerMVC
 
             _levelGeneratorController = new GeneratorController(_levelGeneratorView);
             _levelGeneratorController.Initialize();
+
+            _questConfiguratorController = new QuestConfiguratorController(_questView); //NEW LESSON 7
+            _questConfiguratorController.Initialization(); //NEW LESSON 7
         }
 
         private void LateUpdate()

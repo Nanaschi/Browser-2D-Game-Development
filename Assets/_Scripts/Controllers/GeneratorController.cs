@@ -14,6 +14,8 @@ namespace PlatformerMVC.Controllers
         [Range(0, 100)] private int _factorSmooth;
         [Range(0, 100)] private int _fillPercentage;
 
+        private MarchingSquaresController _marchingSquaresController; // Lesson 7
+
 
 
         private int[,] _map;
@@ -30,6 +32,8 @@ namespace PlatformerMVC.Controllers
             _fillPercentage = levelGeneratorView.FillPercentage;
 
             _map = new int[_mapWidth, _mapHeight];
+
+            _marchingSquaresController = new MarchingSquaresController(); // Lesson 7
         }
 
         public void Initialize()
@@ -41,8 +45,11 @@ namespace PlatformerMVC.Controllers
             {
                     SmoothMap();
             }
+            
+            _marchingSquaresController.GeneratingGrid(_map, 1); // Lesson 7 Marching squares method
+            _marchingSquaresController.DrawTilesOnMap(_tilemap,_groundTile); // Lesson 7
             //Draw tiles
-            DrawTiles();
+            // DrawTiles();  // Lesson 7
         }
 
         private void RandomFillMap()
