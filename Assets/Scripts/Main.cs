@@ -11,7 +11,7 @@ namespace PlatformerMVC
 {
     public class Main : MonoBehaviour
     {
-        [SerializeField] private SpriteAnimatorConfig _playerAnimatorConfig;
+        private SpriteAnimatorConfig _playerAnimatorConfig;
         [SerializeField] private int _animationSpeed;
         [SerializeField] private LevelObjectView _playerView;
 
@@ -21,6 +21,7 @@ namespace PlatformerMVC
 
         private void Start()
         {
+            _playerView.Initialize();
             _playerAnimatorConfig = Resources.Load<SpriteAnimatorConfig>("PlayerAnimatorConfig");
             if (_playerAnimatorConfig)
             {
