@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40cfdb934950684193eae9d727c61fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAnimatorConfig: {fileID: 11400000, guid: 1c315243fbc6ca04e83a0e47af840e5a, type: 2}
+  _playerAnimatorConfig: {fileID: 0}
   _animationSpeed: 10
   _playerView: {fileID: 1937485581}
 --- !u!4 &1041663932 stripped
