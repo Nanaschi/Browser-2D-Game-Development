@@ -919,12 +919,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tilemap: {fileID: 424920012}
-  _tile: {fileID: 11400000, guid: fec5b071b23284e42a34cd15903c8bfa, type: 2}
+  _tile: {fileID: 11400000, guid: 82f972f151372c948aa975548aaaa958, type: 2}
   _mapWidth: 200
   _mapHeight: 200
   _borders: 1
-  _factorSmooth: 11
-  _fillPercentage: 46
+  _factorSmooth: 48
+  _fillPercentage: 41
 --- !u!1001 &469856800
 PrefabInstance:
   m_ObjectHideFlags: 0
